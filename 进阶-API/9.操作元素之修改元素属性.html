@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        width: 100px;
+        height: 50px;
+        background-color: pink;
+      }
+      img {
+        display: block;
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="jiang">江狗狗</button>
+    <button id="you">youve</button><br />
+    <img src="image/1.jpg" alt="" />
+    <script>
+      // 1.获取元素
+      var jiang = document.getElementById("jiang");
+      var you = document.getElementById("you");
+      var img = document.querySelector("img");
+      // 2.注册事件
+      you.onclick = function () {
+        img.src = "image/2.jpg";
+        img.title = "youve";
+      };
+      jiang.onclick = function () {
+        //点击jiang这个按钮就把资源位置变到1.jpg去
+        img.src = "image/1.jpg";
+        img.title = "江狗狗";
+      };
+    </script>
+  </body>
+</html>

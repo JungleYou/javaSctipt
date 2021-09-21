@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>封装冒泡排序</title>
+    <script>
+      function sum100() {
+        sum = 0;
+        for (var i = 1; i <= 100; i++) {
+          sum += i;
+        }
+        alert("1~100的和为：" + sum);
+      }
+      sum100();
+
+      function sorse(arr) {
+        for (var i = 1; i < arr.length; i++) {
+          for (var j = 0; j < arr.length - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+              var temp = 0;
+              temp = arr[j];
+              arr[j] = arr[j + 1];
+              arr[j + 1] = temp;
+            }
+          }
+        }
+        return arr;
+      }
+      console.log(sorse([1, 2, 3, 5, 4, 7, 6, 8]));
+    </script>
+  </head>
+  <body></body>
+</html>

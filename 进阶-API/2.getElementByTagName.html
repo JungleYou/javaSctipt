@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>根据标签名获取元素</title>
+  </head>
+  <body>
+    <ul>
+      <li>等你很久了，加油赶紧学习1</li>
+      <li>等你很久了，加油赶紧学习2</li>
+      <li>等你很久了，加油赶紧学习3</li>
+      <li>等你很久了，加油赶紧学习4</li>
+      <li>等你很久了，加油赶紧学习5</li>
+    </ul>
+    <ol>
+      <li>等你很久了</li>
+      <li>等你很久了</li>
+      <li>等你很久了</li>
+      <li>等你很久了</li>
+      <li>等你很久了</li>
+    </ol>
+    <script>
+      //返回的是获取元素对象的集合，用伪数组的形式存储的
+      var lis = document.getElementsByTagName("li");
+      console.log(lis); //打印的是li标签的集合
+      console.log(lis[0]); //打印的是哪一个标签及其具体内容
+      //2.我们想要依次打印里面的元素对象可以用for循环来打印
+      for (var i = 0; i < lis.length; i++) {
+        console.log(lis[i]);
+      }
+      //3.如果页面只有一个li，返回的也是伪数组的形式
+      //4.如果页面中没有元素，返回的是空的伪数组形式
+      var ol = decument.getElementsByTagName("ol");
+      console.log(ol.grtElementsByTagName("li"));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //返回数组索引号  indexOf(数组元素),从前开始查找
+      //只返回第一个满足条件的索引号
+      //如果数组没有想要的元素就会输出-1
+      var arr = ["red", "green", "bule", "pink", "blue"];
+      console.log(arr.indexOf("pink"));
+      console.log(arr.indexOf("ask"));
+      //lastindexOf()从后往前找
+      console.log(arr.lastIndexOf("blue"));
+      // _________________________________________
+      //str.indexOf('要查找的字符',起始位置)
+      var str = "改革春风吹满地,春天动物真争气";
+      console.log(str.indexOf("春"));
+      console.log(str.indexOf("春", 5));
+    </script>
+  </head>
+  <body></body>
+</html>

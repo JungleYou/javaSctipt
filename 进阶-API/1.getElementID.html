@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="time">2021/09/17</div>
+    <script>
+      //1.因为文档页面从上往下加载，所以script要写在div下面
+      //2.get 获得 element元素，通过驼峰命名法命名
+      //3.参数id是大小写敏感的字符串
+      var timer = document.getElementById("time");
+      console.log(timer);
+      console.log(typeof timer); //返回的是一个对象
+      console.dir(timer);
+      //   console.dir    返回的是元素对象，能够更好地查看里面的属性和方法
+    </script>
+  </body>
+</html>

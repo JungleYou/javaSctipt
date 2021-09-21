@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //目标，把数组中的不重复的元素选择出来放到新的数组中
+      //   var arr = ['a','b','a','c','s','c','d','f','b','b'];
+      //   1.封装一个去重函数
+      function unique(arr) {
+        newarr = [];
+        for (var i = 0; i < arr.length; i++) {
+          if (newarr.indexOf(arr[i]) == -1) {
+            newarr.push(arr[i]);
+          }
+        }
+        return newarr;
+      }
+      var demo = unique(["a", "b", "a", "c", "s", "c", "d", "f", "b", "b"]);
+      console.log(demo);
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>操作元素改变内容</title>
+    <style>
+      div,
+      p {
+        margin: 10px auto;
+        width: 300px;
+        height: 50px;
+        line-height: 50px;
+        color: black;
+        background-color: pink;
+        border-radius: 30px;
+        text-align: center;
+        font-size: 20px;
+      }
+      button {
+        margin: 10px auto;
+        display: block;
+        height: 50px;
+        background-color: powderblue;
+        border: 1px solid black;
+        border-radius: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <button>显示当前系统的时间</button>
+    <div>某个时间</div>
+    <p>123456</p>
+    <script>
+      //当我们点击了按钮，div里面的文字会发生变化
+      //1.获取元素
+      var btn = document.querySelector("button");
+      var div = document.querySelector("div");
+      //2.注册事件
+      btn.onclick = function () {
+        div.innerText = getDate();
+      };
+
+      function getDate() {
+        var date = new Date();
+        var year = date.getFullYear(); //返回当前的年份
+        var month = date.getMonth() + 1; //月份，返回的月份会小1，所以要+1才对
+        var dates = date.getDate(); //返回几号
+        var arr = [
+          "星期日",
+          "星期一",
+          "星期二",
+          "星期三",
+          "星期四",
+          "星期五",
+          "星期六",
+        ];
+        var day = date.getDay(); //返回星期
+        return "今天是:" + year + "年" + month + "月" + dates + "日" + arr[day];
+      }
+
+      //元素可以不用添加事件,直接显示结果
+      var p = document.querySelector("p");
+      p.innerText = getDate();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //查找数组中所有的a的位置及重复的次数
+      // 1.核心算法：先查找到第一个a的位置
+      // 2.只要indexOf返回的结果不是-1就继续往后查找
+      // 3.因为indexOf只能查找到第一个，所以后面的查找利用第二个参数，当前索引加一，从而继续查找
+      var str = "asdxsdcsaxsxfafafv";
+      var index = str.indexOf("a");
+      var num = 0;
+      while (index !== -1) {
+        console.log(index);
+        num++;
+        index = str.indexOf("a", index + 1);
+      }
+      console.log("a出现的次数为：" + num);
+    </script>
+  </head>
+  <body></body>
+</html>

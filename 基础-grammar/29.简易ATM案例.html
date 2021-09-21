@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var sum = 100;
+      while (1) {
+        var choise = prompt(
+          "请输入你要的操作:" +
+            "\n" +
+            "1.存钱" +
+            "\n" +
+            "2.取钱" +
+            "\n" +
+            "3.显示余额" +
+            "\n" +
+            "4.退出"
+        );
+        if (choise == 1) {
+          while (1) {
+            var money = prompt("您要存入多少钱（退出请按q）");
+            if (money == "q") {
+              alert("您的账户余额为" + sum);
+              break;
+            }
+            sum += parseInt(money);
+          }
+        }
+        if (choise == 2) {
+          while (1) {
+            var money = prompt("您要取多少钱（退出请按q）");
+            if (money == "q") {
+              alert("您的账户余额为" + sum);
+              break;
+            }
+            sum -= parseInt(money);
+            if (sum <= 0) {
+              alert("您的余额不足");
+            }
+          }
+        }
+        if (choise == "3") {
+          alert("您的余额为" + sum);
+        }
+        if (choise == "4") {
+          break;
+        }
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
